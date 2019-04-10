@@ -1,0 +1,64 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+<h1>My noSql Music</h1>
+
+<div class="menu">
+<a (click)="currentList = 'albums'" class="btn">Accueil</a>
+<a (click)="currentList = 'artists'" href="#" class="btn">Artistes</a>
+<a (click)="currentList = 'catalogue'" class="btn">Catalogue</a>
+</div>
+
+
+<ul id="albums" class="cata" *ngIf="currentList == 'albums'">
+  <li *ngFor=" let album of albums;">
+    <a href="" title="">
+      <img [src]="album.picture" width="" height="" alt="" />
+      <img [src]="album.picture" width="" height="" alt="" />
+      <img [src]="album.picture" width="" height="" alt="" />
+      <img [src]="album.picture" width="" height="" alt="" />
+      <img [src]="album.picture" width="" height="" alt="" />
+      <img [src]="album.picture" width="" height="" alt="" />
+    </a>
+    <h2>{{album.name}}</h2>
+    <h3>{{album.artist.name}}</h3>
+    <h4>{{album.year}}</h4>
+  </li>
+
+</ul><!-- end albums -->
+
+<ul id="artists" class="cata" *ngIf="currentList == 'artists'">
+  <li *ngFor=" let artist of artists;">
+    <a href="" title="">
+      <img src="https://image.freepik.com/vecteurs-libre/cercle-fait-instruments-musique_23-2147509304.jpg?2" width="" height="" alt="" />
+      <img src="https://image.freepik.com/vecteurs-libre/cercle-fait-instruments-musique_23-2147509304.jpg?2" width="" height="" alt="" />
+      <img src="https://image.freepik.com/vecteurs-libre/cercle-fait-instruments-musique_23-2147509304.jpg?2" width="" height="" alt="" />
+      <img src="https://image.freepik.com/vecteurs-libre/cercle-fait-instruments-musique_23-2147509304.jpg?2" width="" height="" alt="" />
+      <img src="https://image.freepik.com/vecteurs-libre/cercle-fait-instruments-musique_23-2147509304.jpg?2" width="" height="" alt="" />
+      <img src="https://image.freepik.com/vecteurs-libre/cercle-fait-instruments-musique_23-2147509304.jpg?2" width="" height="" alt="" />
+    </a>
+    <h2>{{artist.name}}</h2>
+    <h3>{{artist.genre}}</h3>
+    <h4>{{artist.nationality}}</h4>
+  </li>
+</ul><!-- end albums -->
+
+
+<ul id="catalogue" class="cata" *ngIf="currentList == 'catalogue'">
+  <li *ngFor=" let cata of catalogue;">
+    <a href="" title="">
+      <img [src]="cata.picture" width="" height="" alt="" />
+      <img [src]="cata.picture" width="" height="" alt="" />
+      <img [src]="cata.picture" width="" height="" alt="" />
+      <img [src]="cata.picture" width="" height="" alt="" />
+      <img [src]="cata.picture" width="" height="" alt="" />
+      <img [src]="cata.picture" width="" height="" alt="" />
+    </a>
+    <h2>{{cata.price}} €</h2>
+    <h3>{{cata.name}}</h3>
+    <h4>{{cata.artist.name}}</h4>
+    <h5>{{cata.year}}</h5>
+  </li>
+
+</ul><!-- end albums -->
+
+<router-outlet></router-outlet>
