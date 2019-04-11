@@ -46,16 +46,3 @@ export class AppComponent implements OnInit {
     });
   }
 }
-/*
-
-db.albums.update(
-  { _id: ObjectId("5cadf88b04c2cd4e74800b61") },
-  {         $set: {
-    year: '1930'
-  }
-  } )
-
-*/
-
-// db.albums.find( { "artist.name" : "Rolling Stones" })
-
